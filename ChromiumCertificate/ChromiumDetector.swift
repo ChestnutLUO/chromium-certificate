@@ -19,6 +19,10 @@ enum ChromiumType: String, CaseIterable {
 	case chromium = "Chromium"
 	case chromiumLibrary = "Chromium库"
 	case electronIdentifier = "Electron标识"
+	case microsoftEdge = "Microsoft Edge"
+	case googleChrome = "Google Chrome"
+	case chromiumEmbedded = "Chromium Embedded Framework"
+	case webView2 = "WebView2"
 }
 
 class ChromiumDetector {
@@ -59,6 +63,30 @@ class ChromiumDetector {
         let electronFrameworkURL = frameworksURL.appendingPathComponent("Electron Framework.framework")
         if FileManager.default.fileExists(atPath: electronFrameworkURL.path) {
             return ChromiumApp(name: appName, type: .electron, path: appURL.path)
+        }
+        
+        // 检查 Microsoft Edge Framework
+        let edgeFrameworkURL = frameworksURL.appendingPathComponent("Microsoft Edge Framework.framework")
+        if FileManager.default.fileExists(atPath: edgeFrameworkURL.path) {
+            return ChromiumApp(name: appName, type: .microsoftEdge, path: appURL.path)
+        }
+        
+        // 检查 Google Chrome Framework
+        let chromeFrameworkURL = frameworksURL.appendingPathComponent("Google Chrome Framework.framework")
+        if FileManager.default.fileExists(atPath: chromeFrameworkURL.path) {
+            return ChromiumApp(name: appName, type: .googleChrome, path: appURL.path)
+        }
+        
+        // 检查 Chromium Embedded Framework
+        let cefFrameworkURL = frameworksURL.appendingPathComponent("Chromium Embedded Framework.framework")
+        if FileManager.default.fileExists(atPath: cefFrameworkURL.path) {
+            return ChromiumApp(name: appName, type: .chromiumEmbedded, path: appURL.path)
+        }
+        
+        // 检查 WebView2 Framework
+        let webView2FrameworkURL = frameworksURL.appendingPathComponent("MSWebView2.framework")
+        if FileManager.default.fileExists(atPath: webView2FrameworkURL.path) {
+            return ChromiumApp(name: appName, type: .webView2, path: appURL.path)
         }
         
         // 检查 Chromium 相关框架
