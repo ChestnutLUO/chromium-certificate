@@ -66,25 +66,25 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Copyright © 2025 Astrian Zheng. Licensed under MIT License."
+            "value" : "Copyright © 2025 Project Contributors. Licensed under MIT License."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Copyright © 2025 Astrian Zheng. MITライセンスの下で提供。"
+            "value" : "Copyright © 2025 プロジェクト貢献者. MITライセンスの下で提供。"
           }
         },
         "yue" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Copyright © 2025 Astrian Zheng. 遵循 MIT 授權條款。"
+            "value" : "Copyright © 2025 項目貢獻者. 遵循 MIT 授權條款。"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Copyright © 2025 Astrian Zheng. 遵循 MIT 开源许可证。"
+            "value" : "Copyright © 2025 项目贡献者. 遵循 MIT 开源许可证。"
           }
         }
       }
