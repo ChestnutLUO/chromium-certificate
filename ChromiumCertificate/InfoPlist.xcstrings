@@ -58,6 +58,36 @@
           }
         }
       }
+    },
+    "NSHumanReadableCopyright" : {
+      "comment" : "Copyright (human-readable)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copyright © 2025 Astrian Zheng. Licensed under MIT License."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copyright © 2025 Astrian Zheng. MITライセンスの下で提供。"
+          }
+        },
+        "yue" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copyright © 2025 Astrian Zheng. 遵循 MIT 授權條款。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copyright © 2025 Astrian Zheng. 遵循 MIT 开源许可证。"
+          }
+        }
+      }
     }
   },
   "version" : "1.1"
