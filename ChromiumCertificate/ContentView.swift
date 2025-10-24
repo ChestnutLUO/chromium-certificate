@@ -36,7 +36,7 @@ struct ContentView: View {
 	
 	var body: some View {
 		ZStack {
-			Image("AnnouncementBg").resizable().frame(width: 640, height: 480).offset(x: 0, y: -2)
+			Image("AnnouncementBg").resizable().frame(width: 640, height: 480).offset(x: 0, y: -12)
 			VStack {
 				Text("MAINVIEW_CHROMIUM_COUNTER \(count)")
 					.multilineTextAlignment(.center)
@@ -57,7 +57,7 @@ struct ContentView: View {
 				}
 			}
 		}
-		.frame(width: 640, height: 420)
+		.frame(width: 640, height: 440)
 	}
 }
 
