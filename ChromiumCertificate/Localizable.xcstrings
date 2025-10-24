@@ -1,6 +1,21 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "✅" : {
+
+    },
+    "✅ = Electron 版本已修复（≥36.9.2, ≥37.6.0, ≥38.2.0, ≥39.0.0）" : {
+
+    },
+    "❌" : {
+
+    },
+    "❌ = Electron 版本存在性能问题" : {
+
+    },
+    "Electron %@" : {
+
+    },
     "LISTVIEW_CLOSE" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -194,6 +209,9 @@
           }
         }
       }
+    },
+    "关于 macOS Sequoia 性能问题：" : {
+
     }
   },
   "version" : "1.0"
