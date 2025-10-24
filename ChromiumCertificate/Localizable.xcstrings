@@ -176,25 +176,25 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The symbol marked before the app indicates whether the Electron version used has performance issues in Sequoia."
+            "value" : "The symbol marked before the app indicates whether the Electron version used has performance issues in Tahoe."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "アプリの前に表示されている記号は、使用されているElectronがSequoiaでパフォーマンス問題を持っているかどうかを示します。"
+            "value" : "アプリの前に表示されている記号は、使用されているElectronがTahoeでパフォーマンス問題を持っているかどうかを示します。"
           }
         },
         "yue" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "App前面標注嘅符號，代表所用嘅Electron係唔係喺Sequoia版本入面有性能問題。"
+            "value" : "App前面標注嘅符號，代表所用嘅Electron係唔係喺Tahoe版本入面有性能問題。"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "App前所标注的符号，代表所使用的Electron 是否在Sequoia版本中携带有性能问题。"
+            "value" : "App前所标注的符号，代表所使用的Electron 是否在Tahoe版本中携带有性能问题。"
           }
         }
       }
