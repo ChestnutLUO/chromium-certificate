@@ -15,12 +15,12 @@ struct ChromiumBasedAppListView: View {
 	var body: some View {
 		VStack(spacing: 0) {
 			HStack {
-				Text("所有带有 Chromium 的应用程序").font(.headline)
+				Text("LISTVIEW_TITLE").font(.headline)
 				Spacer()
 				Button {
 					self.isPresented.toggle()
 				} label: {
-					Text("关闭")
+					Text("LISTVIEW_CLOSE")
 				}
 			}.padding()
 			
@@ -28,7 +28,7 @@ struct ChromiumBasedAppListView: View {
 			
 			ScrollView {
 				if chromiumAppsList.isEmpty {
-					Text("你的电脑没有遭受 Chromium 的荼毒！望君继续努力。").multilineTextAlignment(.center).padding()
+					Text("LISTVIEW_NO_CHRIMIUM_APPS_FOUND").multilineTextAlignment(.center).padding()
 				}
 				VStack(spacing: 8) {
 					ForEach(Array(chromiumAppsList.enumerated()), id: \.element.id) { index, chromiumApp in
@@ -69,6 +69,17 @@ struct ChromiumBasedAppListView: View {
 	}
 }
 
-#Preview {
+#Preview("中文") {
 	ChromiumBasedAppListView(isPresented: .constant(true))
+		.environment(\.locale, Locale(identifier: "zh-Hans"))
+}
+
+#Preview("English") {
+	ChromiumBasedAppListView(isPresented: .constant(true))
+		.environment(\.locale, Locale(identifier: "en"))
+}
+
+#Preview("日本語") {
+	ChromiumBasedAppListView(isPresented: .constant(true))
+		.environment(\.locale, Locale(identifier: "ja"))
 }

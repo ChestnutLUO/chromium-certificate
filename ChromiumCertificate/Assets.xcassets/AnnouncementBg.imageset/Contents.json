@@ -3,10 +3,28 @@
     {
       "filename" : "bg.png",
       "idiom" : "universal"
+    },
+    {
+      "filename" : "bg 1.png",
+      "idiom" : "universal",
+      "locale" : "zh-Hans"
+    },
+    {
+      "filename" : "29B43581-1218-4679-8429-81BB27CE30E4.png",
+      "idiom" : "universal",
+      "locale" : "en"
+    },
+    {
+      "filename" : "D585A608-918C-420B-9400-6A345F88184B.png",
+      "idiom" : "universal",
+      "locale" : "ja"
     }
   ],
   "info" : {
     "author" : "xcode",
     "version" : 1
+  },
+  "properties" : {
+    "localizable" : true
   }
 }
