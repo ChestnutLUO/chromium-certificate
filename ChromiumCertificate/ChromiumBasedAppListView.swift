@@ -34,7 +34,16 @@ struct ChromiumBasedAppListView: View {
 					ForEach(Array(chromiumAppsList.enumerated()), id: \.element.id) { index, chromiumApp in
 						HStack {
 							VStack(alignment: .leading) {
-								Text(chromiumApp.name).bold()
+								HStack {
+									if let isTahoeFixed = chromiumApp.isTahoeFixed {
+										Text(isTahoeFixed ? "✅" : "❌")
+									}
+									Text(chromiumApp.name).bold()
+								}
+								if let version = chromiumApp.electronVersion {
+									Text("Electron \(version)")
+										.font(.system(.caption, design: .monospaced))
+								}
 								Text(chromiumApp.path)
 									.font(.system(.caption, design: .monospaced))
 							}
@@ -46,6 +55,15 @@ struct ChromiumBasedAppListView: View {
 						}
 					}
 				}.padding()
+
+				if chromiumAppsList.contains(where: { $0.isTahoeFixed != nil }) {
+					Divider()
+					VStack(alignment: .leading, spacing: 4) {
+						Text("关于 macOS Sequoia 性能问题：").font(.caption).bold()
+						Text("✅ = Electron 版本已修复（≥36.9.2, ≥37.6.0, ≥38.2.0, ≥39.0.0）").font(.caption2)
+						Text("❌ = Electron 版本存在性能问题").font(.caption2)
+					}.padding().frame(maxWidth: .infinity, alignment: .leading)
+				}
 			}
 		}.frame(width: 300).frame(minHeight: 0, maxHeight: 300)
 	}

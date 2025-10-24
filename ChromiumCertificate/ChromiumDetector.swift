@@ -12,6 +12,8 @@ struct ChromiumApp: Identifiable {
 	let name: String
 	let type: ChromiumType
 	let path: String
+	let electronVersion: String?
+	let isTahoeFixed: Bool?
 }
 
 enum ChromiumType: String, CaseIterable {
@@ -58,23 +60,24 @@ class ChromiumDetector {
         // 检查 Electron Framework
         let electronFrameworkURL = frameworksURL.appendingPathComponent("Electron Framework.framework")
         if FileManager.default.fileExists(atPath: electronFrameworkURL.path) {
-            return ChromiumApp(name: appName, type: .electron, path: appURL.path)
+            let (version, isFixed) = getElectronVersionInfo(at: electronFrameworkURL)
+            return ChromiumApp(name: appName, type: .electron, path: appURL.path, electronVersion: version, isTahoeFixed: isFixed)
         }
         
         // 检查 Chromium 相关框架
         if hasChromiumFrameworks(at: frameworksURL) {
-            return ChromiumApp(name: appName, type: .chromium, path: appURL.path)
+            return ChromiumApp(name: appName, type: .chromium, path: appURL.path, electronVersion: nil, isTahoeFixed: nil)
         }
         
         // 检查可执行文件是否链接到 Chromium 库
         let executableURL = contentsURL.appendingPathComponent("MacOS").appendingPathComponent(appName)
         if hasChromiumLibraries(executablePath: executableURL.path) {
-            return ChromiumApp(name: appName, type: .chromiumLibrary, path: appURL.path)
+            return ChromiumApp(name: appName, type: .chromiumLibrary, path: appURL.path, electronVersion: nil, isTahoeFixed: nil)
         }
         
         // 检查 Info.plist 中的 Electron 标识
         if hasElectronIdentifier(infoPlistPath: infoPlistURL.path) {
-            return ChromiumApp(name: appName, type: .electronIdentifier, path: appURL.path)
+            return ChromiumApp(name: appName, type: .electronIdentifier, path: appURL.path, electronVersion: nil, isTahoeFixed: nil)
         }
         
         return nil
@@ -115,7 +118,7 @@ class ChromiumDetector {
     
     private static func hasElectronIdentifier(infoPlistPath: String) -> Bool {
         guard FileManager.default.fileExists(atPath: infoPlistPath) else { return false }
-        
+
         let task = Process()
         task.launchPath = "/usr/libexec/PlistBuddy"
         task.arguments = ["-c", "Print CFBundleIdentifier", infoPlistPath]
@@ -135,6 +138,56 @@ class ChromiumDetector {
         } catch {
             return false
         }
+    }
+
+    private static func getElectronVersionInfo(at frameworkURL: URL) -> (version: String?, isFixed: Bool?) {
+        let infoPlistPath = frameworkURL.appendingPathComponent("Resources/Info.plist").path
+        guard FileManager.default.fileExists(atPath: infoPlistPath) else { return (nil, nil) }
+
+        let task = Process()
+        task.launchPath = "/usr/bin/plutil"
+        task.arguments = ["-extract", "CFBundleVersion", "raw", infoPlistPath]
+
+        let pipe = Pipe()
+        task.standardOutput = pipe
+        task.standardError = Pipe()
+
+        do {
+            try task.run()
+            task.waitUntilExit()
+
+            guard task.terminationStatus == 0 else { return (nil, nil) }
+
+            let data = pipe.fileHandleForReading.readDataToEndOfFile()
+            let versionString = String(data: data, encoding: .utf8)?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+
+            if versionString.isEmpty { return (nil, nil) }
+
+            let isFixed = isElectronVersionFixed(versionString)
+            return (versionString, isFixed)
+        } catch {
+            return (nil, nil)
+        }
+    }
+
+    private static func isElectronVersionFixed(_ versionString: String) -> Bool {
+        let components = versionString.split(separator: ".").compactMap { Int($0) }
+        guard components.count >= 2 else { return false }
+
+        let major = components[0]
+        let minor = components[1]
+        let patch = components.count > 2 ? components[2] : 0
+
+        if major > 39 { return true }
+        if major == 39 && minor >= 0 { return true }
+        if major == 38 && minor > 2 { return true }
+        if major == 38 && minor == 2 && patch >= 0 { return true }
+        if major == 37 && minor > 6 { return true }
+        if major == 37 && minor == 6 && patch >= 0 { return true }
+        if major == 36 && minor > 9 { return true }
+        if major == 36 && minor == 9 && patch >= 2 { return true }
+
+        return false
     }
     
     static func getChromiumAppCount() -> Int {
