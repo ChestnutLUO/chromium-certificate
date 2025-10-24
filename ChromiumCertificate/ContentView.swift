@@ -32,20 +32,23 @@ struct ContentView: View {
 	let count = ChromiumDetector.getChromiumAppCount()
 	
 	@State private var presentSheet: Bool = false
+	@Environment(\.locale) private var locale
 	
 	var body: some View {
 		ZStack {
-			Image("AnnouncementBg").resizable().frame(width: 640, height: 480)
+			Image("AnnouncementBg").resizable().frame(width: 640, height: 480).offset(x: 0, y: -12)
 			VStack {
-				Text(count != 0 ? "这台 Mac 上一共有 \(count) 个 Chromium" : "这台 Mac 一个 Chromium 都没有！")
+				Text("MAINVIEW_CHROMIUM_COUNTER \(count)")
+					.multilineTextAlignment(.center)
 					.font(.system(size: 35, weight: .semibold))
 					.foregroundColor(Color("TextColor"))
 					.stroke(color: Color("TextBorderColor"), width: 5)
+					.padding(.horizontal)
 				
 				Button {
 					self.presentSheet.toggle()
 				} label: {
-					Text("查看列表").font(.system(size: 20)).padding(.horizontal).padding(.vertical, 8)
+					Text("MAINVIEW_SEE_LIST").font(.system(size: 20)).padding(.horizontal).padding(.vertical, 8)
 				}
 				.buttonStyle(.borderedProminent)
 				.tint(.red)
@@ -54,10 +57,21 @@ struct ContentView: View {
 				}
 			}
 		}
-		.frame(width: 640, height: 420)
+		.frame(width: 640, height: 440)
 	}
 }
 
-#Preview {
+#Preview("中文") {
     ContentView()
+        .environment(\.locale, Locale(identifier: "zh-Hans"))
+}
+
+#Preview("English") {
+    ContentView()
+        .environment(\.locale, Locale(identifier: "en"))
+}
+
+#Preview("日本語") {
+    ContentView()
+        .environment(\.locale, Locale(identifier: "ja"))
 }

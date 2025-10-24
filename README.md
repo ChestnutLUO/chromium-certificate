@@ -39,11 +39,8 @@
 
 ## 🚀 使用方法
 
-1. 下载 DMG 文件
-2. 拖拽到 Applications 文件夹
-3. 运行应用
-4. 欣赏您的"成就"
-5. 分享到朋友圈，让大家一起"喜悦"
+1. 前往 [发行版（Release）页面](https://github.com/Astrian/chromium-certificate/releases/) 下载 ZIP 文件后解压，并拖入「应用程序」文件夹，然后从「应用程序」文件夹中启动
+2. 前往 [Mac App Store](https://apps.apple.com/au/app/chromium-%E5%96%9C%E6%8A%A5/id6748593551?mt=12) 下载
 
 ## 💭 检测原理
 

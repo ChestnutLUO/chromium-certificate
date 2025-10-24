@@ -1,0 +1,374 @@
+{
+  "sourceLanguage" : "zh-Hans",
+  "strings" : {
+    "LISTVIEW_CLOSE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "閉じる"
+          }
+        },
+        "yue" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "閂"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关闭"
+          }
+        }
+      }
+    },
+    "LISTVIEW_ELECTRON_VERSION_TAG %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Electron version: %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Electronバージョン：%@"
+          }
+        },
+        "yue" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Electron版本：%@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Electron版本：%@"
+          }
+        }
+      }
+    },
+    "LISTVIEW_FIXED_INDICATOR" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "✅"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "✅"
+          }
+        },
+        "yue" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "✅"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "✅"
+          }
+        }
+      }
+    },
+    "LISTVIEW_NO_CHRIMIUM_APPS_FOUND" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No Chromium-based apps detected! Keep it up!"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chromiumアプリは検出されませんでした！その調子で頑張ってください！"
+          }
+        },
+        "yue" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "冇搵度Chromium嘅app，望君繼續努力！"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你的电脑没有遭受Chromium的荼毒！望君继续努力。"
+          }
+        }
+      }
+    },
+    "LISTVIEW_PERFORMANCE_ISSUE_PARAGRAPH_1" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "✅ = The Electron version used has fixed this issue (≥36.9.2, ≥37.6.0, ≥38.2.0, ≥39.0.0)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "✅ = 使用されているElectronバージョンでこの問題は修正済み（≥36.9.2, ≥37.6.0, ≥38.2.0, ≥39.0.0）"
+          }
+        },
+        "yue" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "✅ = 所用嘅Electron版本已修復咗呢個問題（≥36.9.2, ≥37.6.0, ≥38.2.0, ≥39.0.0）"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "✅ = 所使用的Electron版本已修复此问题（≥36.9.2, ≥37.6.0, ≥38.2.0, ≥39.0.0）"
+          }
+        }
+      }
+    },
+    "LISTVIEW_PERFORMANCE_ISSUE_PARAGRAPH_2" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "❌ = The Electron version used has performance issues"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "❌ = 使用されているElectronバージョンにパフォーマンス問題が存在します"
+          }
+        },
+        "yue" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "❌ = 所用嘅Electron版本存在性能問題"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "❌ = 所使用的Electron版本存在性能问题"
+          }
+        }
+      }
+    },
+    "LISTVIEW_PERFORMANCE_ISSUE_TITLE" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The symbol marked before the app indicates whether the Electron version used has performance issues in Tahoe."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アプリの前に表示されている記号は、使用されているElectronがTahoeでパフォーマンス問題を持っているかどうかを示します。"
+          }
+        },
+        "yue" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App前面標注嘅符號，代表所用嘅Electron係唔係喺Tahoe版本入面有性能問題。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App前所标注的符号，代表所使用的Electron 是否在Tahoe版本中携带有性能问题。"
+          }
+        }
+      }
+    },
+    "LISTVIEW_TITLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All Chromium-based Apps"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chromiumベースのアプリ一覧"
+          }
+        },
+        "yue" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "所有基於Chromium嘅app"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "所有带有Chromium的应用程序"
+          }
+        }
+      }
+    },
+    "LISTVIEW_UNFIX_INDICATOR" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "❌"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "❌"
+          }
+        },
+        "yue" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "❌"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "❌"
+          }
+        }
+      }
+    },
+    "MAINVIEW_CHROMIUM_COUNTER %lld" : {
+      "comment" : "Showing below the “congratulations” (喜报) title",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld app with Chromium discovered in this Mac"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld apps with Chromium discovered in this Mac"
+                }
+              },
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "No Chromium apps found on this Mac!"
+                }
+              }
+            }
+          }
+        },
+        "ja" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "このMacに%lld個のChromiumアプリが見つかりました"
+                }
+              },
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "このMacにはChromiumアプリがありません！"
+                }
+              }
+            }
+          }
+        },
+        "yue" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "係呢台Mac上搵度%lld個Chromium app "
+                }
+              },
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "係呢台Mac上冇搵度任何Chromium app！"
+                }
+              }
+            }
+          }
+        },
+        "zh-Hans" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "这台Mac上一共有%lld个 Chromium"
+                }
+              },
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "这台Mac一个Chromium都没有！"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "MAINVIEW_SEE_LIST" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "View List"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "リストを見る"
+          }
+        },
+        "yue" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "睇下列表"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "查看列表"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
