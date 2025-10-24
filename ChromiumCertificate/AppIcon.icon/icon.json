@@ -10,20 +10,20 @@
           "fill-specializations" : [
             {
               "value" : {
-                "solid" : "display-p3:1.00000,0.87683,0.60124,1.00000"
+                "automatic-gradient" : "display-p3:1.00000,0.87683,0.60124,1.00000"
               }
             },
             {
               "appearance" : "dark",
               "value" : {
-                "solid" : "display-p3:0.74118,0.60784,0.37255,1.00000"
+                "automatic-gradient" : "display-p3:0.74118,0.60784,0.37255,1.00000"
               }
             }
           ],
           "glass" : false,
           "hidden" : false,
-          "image-name" : "囍 (1).svg",
-          "name" : "囍 (1)",
+          "image-name" : "囍 (3).svg",
+          "name" : "囍 (3)",
           "position" : {
             "scale" : 0.97,
             "translation-in-points" : [
