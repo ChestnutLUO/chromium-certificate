@@ -307,8 +307,8 @@
             "plural" : {
               "other" : {
                 "stringUnit" : {
-                  "state" : "new",
-                  "value" : "%lld apps with Chromium discovered in this Mac"
+                  "state" : "translated",
+                  "value" : "係呢台Mac上搵度%lld個Chromium app "
                 }
               },
               "zero" : {

@@ -36,12 +36,12 @@ struct ChromiumBasedAppListView: View {
 							VStack(alignment: .leading) {
 								HStack {
 									if let isTahoeFixed = chromiumApp.isTahoeFixed {
-										Text(isTahoeFixed ? "✅" : "❌")
+										Text(isTahoeFixed ? "LISTVIEW_FIXED_INDICATOR" : "LISTVIEW_UNFIX_INDICATOR")
 									}
 									Text(chromiumApp.name).bold()
 								}
 								if let version = chromiumApp.electronVersion {
-									Text("Electron \(version)")
+									Text("LISTVIEW_ELECTRON_VERSION_TAG \(version)")
 										.font(.system(.caption, design: .monospaced))
 								}
 								Text(chromiumApp.path)
@@ -59,9 +59,9 @@ struct ChromiumBasedAppListView: View {
 				if chromiumAppsList.contains(where: { $0.isTahoeFixed != nil }) {
 					Divider()
 					VStack(alignment: .leading, spacing: 4) {
-						Text("关于 macOS Sequoia 性能问题：").font(.caption).bold()
-						Text("✅ = Electron 版本已修复（≥36.9.2, ≥37.6.0, ≥38.2.0, ≥39.0.0）").font(.caption2)
-						Text("❌ = Electron 版本存在性能问题").font(.caption2)
+						Text("LISTVIEW_PERFORMANCE_ISSUE_TITLE").font(.caption).bold()
+						Text("LISTVIEW_PERFORMANCE_ISSUE_PARAGRAPH_1").font(.caption2)
+						Text("LISTVIEW_PERFORMANCE_ISSUE_PARAGRAPH_2").font(.caption2)
 					}.padding().frame(maxWidth: .infinity, alignment: .leading)
 				}
 			}
